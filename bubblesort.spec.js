@@ -14,19 +14,41 @@ describe('Bubble Sort', function(){
 
 });
 
-describe('Swap', function() {
+describe('A spy', function() {
+  var arr = null;
+
 
   beforeAll(function () {
-    spyOn(arr, 'swap').and.callThrough();
+    arr = [];
+    spyOn(window, 'swap');
   });
 
   it ('tracks the number of times it was called', function() {
-    expect(arr.swap.calls.count()).toEqual(0);
+    expect(window.swap.calls.count()).toEqual(0);
 
-    arr.swap();
-    arr.swap();
-    arr.swap();
+    window.swap(arr);
+    window.swap(arr);
+    window.swap(arr);
 
-    expect(arr.swap.calls.count()).toEqual(3);
+    expect(window.swap.calls.count()).toEqual(3);
   });
+})
+
+describe('A spy', function () {
+  var arr = null;
+
+  beforeAll(function () {
+    arr = [];
+    spyOn(window, 'compare');
+  });
+
+  it ('tracks the number of comparisons made', function () {
+    expect(window.compare.calls.count()).toEqual(0);
+
+    window.compare(arr);
+    window.compare(arr);
+    window.compare(arr);
+
+    expect(window.compare.calls.count()).toEqual(3);
+  })
 })
