@@ -7,22 +7,26 @@ function split(wholeArray) {
   return [firstHalf, secondHalf];
 }
 
-let mergedArr = [];
 
 function merge(arr1, arr2) {
-  let smaller = arr1[0] <= arr2[0] ? arr1 : arr2;
-  let larger = smaller === arr1 ? arr2 : arr1;
+  let mergedArr = [];
+  // let smaller = arr1[0] <= arr2[0] ? arr1 : arr2;
+  // let larger = smaller === arr1 ? arr2 : arr1;
 
-  console.log(smaller);
-  console.log(larger);
+  // console.log('smaller', smaller);
+  // console.log('larger', larger);
+  // console.log('empty arr??', mergedArr);
 
-  if (smaller.length === 1) {
-    mergedArr.push(smaller[0]);
-    mergedArr.push(larger[0]);
-    return mergedArr;
-  }
+  // if (smaller.length === 1) {
+  //   mergedArr.push(smaller[0]);
+  //   mergedArr.push(larger[0]);
+  //   return mergedArr;
+  // }
 
-  mergedArr.push(smaller[0]);
-  console.log(mergedArr);
-  return merge(smaller.slice(1), larger);
+  // mergedArr.push(smaller[0]);
+  // console.log('merged arr', mergedArr);
+  // return merge(smaller.slice(1), larger);
+
+
+
 }
