@@ -19,12 +19,12 @@ function bubbleSort(arr) {
 
 function compare(arr) {
   for (var i = 0; i < arr.length - counter; i++) {
-    console.log(arr[i]);
+    // console.log(arr[i]);
     if (arr[i] > arr[i+1]) {
       let swappedItem = arr[i+1];
       arr[i+1] = arr[i];
       arr[i] = swappedItem;
-      console.log(arr);
+      // console.log(arr);
     }
   }
 }
