@@ -27,6 +27,30 @@ function merge(arr1, arr2) {
   // console.log('merged arr', mergedArr);
   // return merge(smaller.slice(1), larger);
 
+  let smaller = arr1.length < arr2.length ? arr1 : arr2;
 
+  while (arr1.length && arr2.length) {
+    if (arr1[0] < arr2[0]) {
+      mergedArr.push(arr1[0]);
+      arr1 = arr1.slice(1);
+    } else {
+      mergedArr.push(arr2[0]);
+      arr2 = arr2.slice(1);
+    }
+  }
 
+  console.log('arr1', arr1);
+  console.log('arr2', arr2);
+  console.log('merged array', mergedArr);
+
+  console.log('merged array + arr1', mergedArr.concat(arr1));
+
+  mergedArr.concat(arr1);
+  mergedArr.concat(arr2);
+  return mergedArr.concat(arr1, arr2);
+
+  // let arr1Start = arr1.shift();
+  // let arr2Start = arr2.shift();
+
+  // mergedArr.push(Math.min(arr1Start, arr2Start);
 }
