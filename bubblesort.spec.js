@@ -17,7 +17,6 @@ describe('Bubble Sort', function(){
 describe('A spy', function() {
   var arr = null;
 
-
   beforeAll(function () {
     arr = [];
     spyOn(window, 'swap');
